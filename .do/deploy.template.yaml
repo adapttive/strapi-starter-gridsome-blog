@@ -1,0 +1,9 @@
+spec:
+  name: strapi-starter-gridsome-blog
+  static_sites:
+    - name: web
+      git:
+        branch: main
+        repo_clone_url: https://github.com/adapttive/strapi-starter-gridsome-blog.git
+      dockerfile_path: Dockerfile.static
+      output_dir: /app/dist

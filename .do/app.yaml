@@ -1,0 +1,9 @@
+name: strapi-starter-gridsome-blog
+static_sites:
+  - name: web
+    github:
+      deploy_on_push: true
+      branch: main
+      repo: adapttive/strapi-starter-gridsome-blog
+    dockerfile_path: Dockerfile.static
+    output_dir: /app/dist

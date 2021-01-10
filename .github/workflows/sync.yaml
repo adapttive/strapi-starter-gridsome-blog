@@ -1,0 +1,17 @@
+name: Sync with Live
+
+on:
+  push:
+    branches: [ live ]
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repo-sync
+        uses: wei/git-sync@v2
+        with:
+          source_repo: "https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_TOKEN}}@github.com/adapttive/strapi-starter-gridsome-blog.git"
+          source_branch: "live"
+          destination_repo: "https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_TOKEN}}@github.com/adapttive/strapi-starter-gridsome-blog.git"
+          destination_branch: "main"
